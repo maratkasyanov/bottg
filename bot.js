@@ -122,8 +122,8 @@ async function sendParseDate() {
 //     console.error("Произошла ошибка:", error);
 //   });
 // });
-
-const job = schedule.scheduleJob('*/01 10-20 * * *', sendParseDate);
+setInterval(sendParseDate, 10000);
+// const job = schedule.scheduleJob('*/01 10-20 * * *', sendParseDate);
 
 // bot.setMyCommands(
 //   [
