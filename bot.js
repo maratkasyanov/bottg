@@ -37,6 +37,7 @@ async function sendParseDate() {
     let element = res.data.products.find((elem) => {
       return !addedId.includes(String(elem.id)) && elem.sizes[elem.sizes.length - 1].price.product / 100 <= 1000;
     })
+    console.log(element)
     result.push([
       `\n\n🛒<b>Название</b>: <i>${element.name}</i>`,
       `\n*Id товара*:`,
