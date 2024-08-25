@@ -8,7 +8,9 @@ const bot = new TelegramBot(token, { polling: true });
 let result = []
 let addedId = ['224611785']
 let users = []
-const channelId = "@lavochka_halyavochka"
+///adada12cbg
+///lavochka_halyavochka
+const channelId = "@adada12cbg"
 console.log(resultArr)
 async function sendParseDate() {
   if (addedId.length > 600) addedId = ['224611785']
@@ -110,7 +112,7 @@ async function sendParseDate() {
 
 
 }
-cron.schedule('*/20 10-20 * * *', function () {
+cron.schedule('*/01 10-20 * * *', function () {
   console.log('Запуск функции каждые 20 минут с 7 утра до 7 вечера');
   sendParseDate().catch(error => {
     console.error("Произошла ошибка:", error);
