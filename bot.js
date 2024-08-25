@@ -1,5 +1,6 @@
 const puppeteer = require('puppeteer');
 const cron = require('node-cron');
+const schedule = require('node-schedule');
 const getRandomNumber = require('./fns');
 const resultArr = require('./index')
 const TelegramBot = require('node-telegram-bot-api');
@@ -113,12 +114,14 @@ async function sendParseDate() {
 
 
 }
-cron.schedule('*/01 10-20 * * *', function () {
-  console.log('Запуск функции каждые 20 минут с 7 утра до 7 вечера');
-  sendParseDate().catch(error => {
-    console.error("Произошла ошибка:", error);
-  });
-});
+// cron.schedule('*/01 10-20 * * *', function () {
+//   console.log('Запуск функции каждые 20 минут с 7 утра до 7 вечера');
+//   sendParseDate().catch(error => {
+//     console.error("Произошла ошибка:", error);
+//   });
+// });
+
+const job = schedule.scheduleJob('*/01 10-20 * * *', sendParseDate);
 
 // bot.setMyCommands(
 //   [
