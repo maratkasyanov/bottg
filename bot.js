@@ -14,8 +14,10 @@ let users = []
 const channelId = "@adada12cbg"
 console.log(resultArr)
 async function sendParseDate() {
+  console.log('хуй')
   if (addedId.length > 600) addedId = ['224611785']
   const fetchPromises = resultArr.map(async (elem) => {
+    console.log('pfgecnbkfcm')
     const url = elem[getRandomNumber(0, elem.length - 1)];
 
     const response = await fetch(url, {
