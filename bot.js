@@ -32,7 +32,7 @@ async function sendParseDate() {
       body: null,
       method: "GET"
     });
-
+    console.log(response.status)
     const res = await response.json();
     let element = res.data.products.find((elem) => {
       return !addedId.includes(String(elem.id)) && elem.sizes[elem.sizes.length - 1].price.product / 100 <= 1000;
