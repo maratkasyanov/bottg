@@ -67,7 +67,7 @@ async function sendParseDate() {
       // Переходим на страницу товара
       await page.goto(`https://www.wildberries.ru/catalog/${elem[2]}/detail.aspx?targetUrl=SP`, {
         waitUntil: 'networkidle2',
-        timeout: 80000 // Увеличиваем тайм-аут до 60 секунд
+        timeout: 120000 // Увеличиваем тайм-аут до 60 секунд
       });
 
       // Получаем ссылки на изображения
